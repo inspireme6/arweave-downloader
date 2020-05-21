@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Easily download data from the Arweave blockchain!">
+		<meta name="author" content="inspireme6">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Arweave.Downloader</title>
+
+		<script src="https://unpkg.com/arweave/bundles/web.bundle.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="shortcut icon" type="image/png" href="img/arweave_downloader.png"/>
+		
+		<style type="text/css">
+			html {
+			  height: 100%;
+			}
+			body {
+			  position: relative;
+			  margin: 0;
+			  min-height: 100%;
+			}
+			footer {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: #efefef;
+				text-align: center;				
+			}
+			@media screen and (max-width: 767px) {
+				h1 {
+					font-size: 24px;
+				}
+			}
+			@media screen and (max-width: 420px) {
+				.lbl {
+					font-size: 11px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="about" class="container content-section">
+			<div class="row text-center justify-content-center mt-3">
+				<div class="col-lg-6 text-center">
+					<div class="pb-2 mt-4 mb-2 border-bottom">
+						<img id="idicon" width="60px" src="img/arweave_downloader.png">
+						<h1 class="text-center">Arweave.Downloader</h1>
+						<p>Easily download data from the Arweave blockchain!</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center mt-3">
+				<div class="col-lg-6">
+					<form action="#" id="searchForm">
+						<div class="input-group mb-3">
+						  <input type="text" class="search-text form-control" autofocus="autofocus" placeholder="Arweave address or txid...">
+						  <div class="input-group-append">
+							<button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
+						  </div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row justify-content-center mt-3">
+				<div class="loading-1 spinner-border" role="status" style="display: none;">
+					<span class="sr-only">Loading...</span>
+				</div>
+				<div class="msg text-center"></div>
+			</div>
+			<div class="row justify-content-center mt-3">
+				<form action="#" id="downloadForm">
+					<div class="awesomelist">
+					</div>
+					<div class="w-100"></div>
+					<div class="download text-center mt-3 mb-5" style="display: none;">
+						<button type="submit" class="downloadbtn btn btn-outline-secondary">
+						<div id="button-n"><i class="fa fa-download"> Download</i></div>
+						<div id="button-l" style="display: none;">
+							<span class="spinner-border spinner-border-sm" role="status"></span>
+							<span class="processing"></span>
+						</div>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer>
+			created by: inspireme6	-	<a href="https://github.com/inspireme6/arweave-downloader" target="_blank">github</a>
+		</footer>
+		
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="js/jszip.min.js"></script>
+		<script src="js/FileSaver.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
